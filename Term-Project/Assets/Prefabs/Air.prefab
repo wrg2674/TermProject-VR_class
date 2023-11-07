@@ -429,7 +429,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2327577955036515516}
-  - component: {fileID: 4715088161454722960}
   m_Layer: 0
   m_Name: Air
   m_TagString: Untagged
@@ -457,19 +456,6 @@ Transform:
   - {fileID: 3502915598247829444}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4715088161454722960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8907388606205059534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c30ebd690cee9a4f82520f30ad31506, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 0
 --- !u!1 &8990168967426984396
 GameObject:
   m_ObjectHideFlags: 0
