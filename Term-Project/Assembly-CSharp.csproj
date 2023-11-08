@@ -58,7 +58,8 @@
     <Analyzer Include="D:\Unity\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\cshCharactor.cs" />
+    <Compile Include="Assets\Scripts\cshCamera.cs" />
+    <Compile Include="Assets\Scripts\cshCharacter.cs" />
     <Compile Include="Assets\Scripts\cshFirePowder.cs" />
   </ItemGroup>
   <ItemGroup>

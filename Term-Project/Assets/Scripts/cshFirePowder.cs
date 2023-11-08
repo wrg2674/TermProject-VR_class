@@ -7,6 +7,7 @@ public class cshFirePowder : MonoBehaviour
 {
     public Transform firePos;
     public GameObject powder;
+    public GameObject key;
     private float speed = 500.0f;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,39 @@ public class cshFirePowder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        input();
+        
+        if(key == null)
+        {
+            input();
+        }
+        else
+        {
+            pinOut();
+        }
+        
+    }
+    void pinOut()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+          
+            // 화면에 있는 좌표를 월드 좌표계로 변환시키는 함수
+            // 매개변수 : 월드 좌표계로 바꿀 화면의 좌표
+            Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition+new Vector3(0.0f,0.0f,1.0f));
+            Debug.Log(clickPos);
+            float rangeXL = key.transform.position.x - key.transform.localScale.x;
+            float rangeXH = key.transform.position.x + key.transform.localScale.x;
+            float rangeYL = key.transform.position.y - key.transform.localScale.y;
+            float rangeYH = key.transform.position.y + key.transform.localScale.y;
+            Debug.Log("rangeXL : " + rangeXL);
+            Debug.Log("rangeXH : " + rangeXH);
+            Debug.Log("rangeYL : " + rangeYL);
+            Debug.Log("rangeYH : " + rangeYH);
+            if (clickPos.x >= rangeXL && clickPos.x <= rangeXH && clickPos.y >= rangeYL && clickPos.y <= rangeYH)
+            {
+                Destroy(key);
+            }
+        }
     }
     public void input()
     {
