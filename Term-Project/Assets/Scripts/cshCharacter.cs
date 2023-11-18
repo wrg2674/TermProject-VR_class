@@ -18,70 +18,45 @@ public class cshCharacter : MonoBehaviour
     void Update()
     {
         move();
-        look();
-    }
-    void look()
-    {
-        Vector3 pos = Vector3.zero;
-        Vector3 dir = Vector3.zero;
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            pos -= Vector3.forward;
-            dir += Vector3.forward;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            pos -= Vector3.left;
-            dir += Vector3.left;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            pos -= Vector3.right;
-            dir += Vector3.right;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            pos -= Vector3.back;
-            dir += Vector3.back;
-        }
-        dir = dir.normalized;
-        if(dir.magnitude > 0.1f)
-        {
-            camera.transform.position = transform.position + pos;
-            camera.transform.LookAt(transform.position + dir);
-        }
         
     }
-    void move()
+    private void look(Vector3 dir)
+    {
+        camera.transform.position = firePos.position+dir+new Vector3(0.0f,0.1f,0.0f);
+        camera.transform.rotation = firePos.rotation;
+    }
+    private void move()
     {
     Vector3 dir = Vector3.zero;
     Vector3 distance = Vector3.zero;
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
         {
             distance += Vector3.forward;
             dir += Vector3.forward;
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             distance += Vector3.forward;
             dir += Vector3.left;
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             distance += Vector3.forward;
             dir += Vector3.right;
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S))
         {
             distance += Vector3.forward;
             dir += Vector3.back;
         }
         distance = distance.normalized;
         transform.Translate(distance * Time.deltaTime * speed);
-        if(dir.magnitude > 0.1f)
+        if (dir.magnitude > 0.1f)
         {
-            transform.LookAt(transform.position + dir);
-            
+            dir = dir.normalized;
+            transform.LookAt(transform.position - dir);
+            look(dir);
         }
+
     }
 }

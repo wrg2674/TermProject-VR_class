@@ -354,7 +354,11 @@
 -analyzer:"D:/Unity/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/cshCamera.cs"
 "Assets/Scripts/cshCharacter.cs"
+"Assets/Scripts/cshFire.cs"
 "Assets/Scripts/cshFirePowder.cs"
+"Assets/Scripts/cshSmoke.cs"
+"Assets/Scripts/cshTeleport.cs"
+"Assets/Scripts/cshWind.cs"
 -langversion:9.0
 
 /deterministic

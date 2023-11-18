@@ -8,11 +8,13 @@ public class cshFirePowder : MonoBehaviour
     public Transform firePos;
     public GameObject powder;
     public GameObject key;
+    public GameObject wind;
+    public bool isInDoor = true;
     private float speed = 500.0f;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -37,16 +39,14 @@ public class cshFirePowder : MonoBehaviour
             // 화면에 있는 좌표를 월드 좌표계로 변환시키는 함수
             // 매개변수 : 월드 좌표계로 바꿀 화면의 좌표
             Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition+new Vector3(0.0f,0.0f,1.0f));
-            Debug.Log(clickPos);
             float rangeXL = key.transform.position.x - key.transform.localScale.x;
             float rangeXH = key.transform.position.x + key.transform.localScale.x;
             float rangeYL = key.transform.position.y - key.transform.localScale.y;
             float rangeYH = key.transform.position.y + key.transform.localScale.y;
-            Debug.Log("rangeXL : " + rangeXL);
-            Debug.Log("rangeXH : " + rangeXH);
-            Debug.Log("rangeYL : " + rangeYL);
-            Debug.Log("rangeYH : " + rangeYH);
-            if (clickPos.x >= rangeXL && clickPos.x <= rangeXH && clickPos.y >= rangeYL && clickPos.y <= rangeYH)
+            float rangeZL = key.transform.position.z - key.transform.localScale.z;
+            float rangeZH = key.transform.position.z + key.transform.localScale.z;
+
+            if (((clickPos.x >= rangeXL && clickPos.x <= rangeXH) ||(clickPos.z >= rangeZL && clickPos.z <= rangeZH)) && clickPos.y >= rangeYL && clickPos.y <= rangeYH)
             {
                 Destroy(key);
             }
@@ -63,6 +63,8 @@ public class cshFirePowder : MonoBehaviour
     }
     public void fire(Vector3 v)
     {
+        Vector3 windDirection = wind.GetComponent<cshWind>().getWindDirection();
+        float windForce = wind.GetComponent<cshWind>().getWindForce();
         GameObject[] powders = new GameObject[9];
         for(int i=0; i < 4; i++)
         {
@@ -72,9 +74,25 @@ public class cshFirePowder : MonoBehaviour
             powders[i].transform.Rotate(5.0f * (i / 2 - 1), 5.0f*(i%2-1), 0.0f);
             powders[i].transform.Rotate(v);
             powders[i].GetComponent<Rigidbody>().AddForce(powders[i].transform.forward * speed*Random.Range(0.5f,1.2f));
+            powders[i].GetComponent<Rigidbody>().AddForce(windDirection*windForce);
             Destroy(powders[i], 0.5f);
         }
         
 
+    }
+    public void setWind(GameObject wind)
+    {
+        this.wind = wind;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "TELEPORT")
+        {
+            wind = other.gameObject.GetComponent<cshWind>().gameObject;
+        }
+    }
+    public void changeIsInDoor()
+    {
+        this.isInDoor = !this.isInDoor;
     }
 }
