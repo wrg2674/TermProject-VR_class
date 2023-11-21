@@ -32,7 +32,7 @@ public class cshWind : MonoBehaviour
         windDirection.x = Random.Range(-1, 1);
         windDirection.y = Random.Range(-1, 1);
         windDirection.z = Random.Range(-1, 1);
-        windForce = Random.Range(100.0f, 1000.0f);
+        windForce = Random.Range(100.0f, 500.0f);
     }
     public Vector3 getWindDirection()
     {

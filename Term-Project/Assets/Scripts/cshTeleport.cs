@@ -33,12 +33,12 @@ public class cshTeleport : MonoBehaviour
         if(this.gameObject == inDoor)
         {
             player.transform.position = outDoor.transform.position - distance;
-            player.GetComponent<cshFirePowder>().changeIsInDoor();
+            player.GetComponentInChildren<cshFirePowder>().changeIsInDoor();
         }
         else
         {
             player.transform.position = inDoor.transform.position + distance;
-            player.GetComponent<cshFirePowder>().changeIsInDoor();
+            player.GetComponentInChildren<cshFirePowder>().changeIsInDoor();
         }
         
     }

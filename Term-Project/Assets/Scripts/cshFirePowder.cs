@@ -63,7 +63,9 @@ public class cshFirePowder : MonoBehaviour
     }
     public void fire(Vector3 v)
     {
+        
         Vector3 windDirection = wind.GetComponent<cshWind>().getWindDirection();
+        Vector3 windGlobalDirection = wind.transform.TransformVector(windDirection);
         float windForce = wind.GetComponent<cshWind>().getWindForce();
         GameObject[] powders = new GameObject[9];
         for(int i=0; i < 4; i++)
@@ -74,7 +76,7 @@ public class cshFirePowder : MonoBehaviour
             powders[i].transform.Rotate(5.0f * (i / 2 - 1), 5.0f*(i%2-1), 0.0f);
             powders[i].transform.Rotate(v);
             powders[i].GetComponent<Rigidbody>().AddForce(powders[i].transform.forward * speed*Random.Range(0.5f,1.2f));
-            powders[i].GetComponent<Rigidbody>().AddForce(windDirection*windForce);
+            powders[i].GetComponent<Rigidbody>().AddForce(windGlobalDirection * windForce);
             Destroy(powders[i], 0.5f);
         }
         
