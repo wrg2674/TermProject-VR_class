@@ -29,9 +29,9 @@ public class cshWind : MonoBehaviour
     }
     public void changeWind()
     {
-        windDirection.x = Random.Range(-1, 1);
-        windDirection.y = Random.Range(-1, 1);
-        windDirection.z = Random.Range(-1, 1);
+        windDirection.x = Random.Range(-0.5f, 0.5f);
+        windDirection.y = Random.Range(-0.5f, 0.5f);
+        windDirection.z = Random.Range(-0.5f, 0.5f);
         windForce = Random.Range(100.0f, 500.0f);
     }
     public Vector3 getWindDirection()

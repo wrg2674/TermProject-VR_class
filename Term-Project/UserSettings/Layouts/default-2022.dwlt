@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 143
+  controlID: 26
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,8 +166,8 @@ MonoBehaviour:
     y: 0
     width: 308
     height: 947
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 485
     width: 896
     height: 462
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -385,23 +385,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 2efbffff425a0000
+      m_SelectedIDs: 645a0000
+      m_LastClickedID: 23140
+      m_ExpandedIDs: 2efbffff6a59000094590000465a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: FireInDoor
-        m_OriginalName: FireInDoor
+        m_Name: FireExtinguisher
+        m_OriginalName: FireExtinguisher
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 23356
+        m_UserData: 23110
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -518,9 +518,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e8620000
-    m_LastClickedID: 25320
-    m_ExpandedIDs: 00000000b6620000b8620000ba620000bc620000be620000c0620000c2620000c4620000e06200000c63000000ca9a3bffffff7f
+    m_SelectedIDs: 12630000
+    m_LastClickedID: 25362
+    m_ExpandedIDs: 00000000e0620000e2620000e4620000e6620000e8620000ea620000ec620000ee62000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -548,7 +548,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b6620000b8620000ba620000bc620000be620000c0620000c2620000c4620000
+    m_ExpandedIDs: 00000000e0620000e2620000e4620000e6620000e8620000ea620000ec620000ee620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1032,9 +1032,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -44.339035, y: -29.573074, z: -45.668034}
+    m_Target: {x: -4.224591, y: 1.5665594, z: 10.574041}
     speed: 2
-    m_Value: {x: -44.339035, y: -29.573074, z: -45.668034}
+    m_Value: {x: -4.224591, y: 1.5665594, z: 10.574041}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1080,13 +1080,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.020971945, y: -0.96707034, z: 0.24011686, w: 0.08752223}
+    m_Target: {x: 0.19278114, y: 0.23425196, z: -0.047633767, w: 0.9522181}
     speed: 2
-    m_Value: {x: 0.020830676, y: -0.96695524, z: 0.23854898, w: 0.087510616}
+    m_Value: {x: 0.19268222, y: 0.23413178, z: -0.04760933, w: 0.9517296}
   m_Size:
-    m_Target: 32.521107
+    m_Target: 0.605644
     speed: 2
-    m_Value: 32.521107
+    m_Value: 0.605644
   m_Ortho:
     m_Target: 0
     speed: 2

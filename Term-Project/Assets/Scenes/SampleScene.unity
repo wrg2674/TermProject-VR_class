@@ -1018,6 +1018,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4345197550711715204, guid: bf0ea4a7b2c279047a7d801bff445913, type: 3}
   m_PrefabInstance: {fileID: 1514801361}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &229664528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67965776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4e9f13a8bc6e2498bcb8c158373144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePos: {fileID: 158905189}
+  powder: {fileID: 7600876668756516877, guid: 3f2c8ab2dbfc0b344bd94f6dd05fcaf5, type: 3}
+  key: {fileID: 1913812660}
+  wind: {fileID: 548082083}
+  isInDoor: 1
 --- !u!1001 &231743023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2146,8 +2163,20 @@ PrefabInstance:
       value: Lemon Tree 4
       objectReference: {fileID: 0}
     - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.850555
+      value: -45.79
       objectReference: {fileID: 0}
     - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2155,11 +2184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.23
+      value: -26.22
       objectReference: {fileID: 0}
     - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2167,7 +2196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2179,7 +2208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4280707092021346, guid: f1ac1674b1044b940a5e6f1e32750350, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4055,7 +4084,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -4637,7 +4666,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.061, y: 0.69, z: -0.037}
+  m_LocalPosition: {x: -0.005, y: 0.318, z: -0.714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4656,6 +4685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 786703070}
+  firePos: {fileID: 158905189}
 --- !u!4 &974997851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4757723854870162, guid: 6d513e3e97508a3429bc5eac2b8b7145, type: 3}
@@ -5545,7 +5575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4050686539739764, guid: 3c98bb4bee2f2ba4b92a2fbca7b8831f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.1
+      value: -68.1
       objectReference: {fileID: 0}
     - target: {fileID: 4050686539739764, guid: 3c98bb4bee2f2ba4b92a2fbca7b8831f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6667,9 +6697,13 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4307560395867504671, guid: bf0ea4a7b2c279047a7d801bff445913, type: 3}
     - {fileID: 2621345789843837121, guid: bf0ea4a7b2c279047a7d801bff445913, type: 3}
+    - {fileID: 1556607887535408352, guid: bf0ea4a7b2c279047a7d801bff445913, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4307560395867504668, guid: bf0ea4a7b2c279047a7d801bff445913, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 229664528}
   m_SourcePrefab: {fileID: 100100000, guid: bf0ea4a7b2c279047a7d801bff445913, type: 3}
 --- !u!1001 &1526434593
 PrefabInstance:
@@ -7527,8 +7561,20 @@ PrefabInstance:
       value: Lemon Tree 3 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -61.6
+      value: -85.6
       objectReference: {fileID: 0}
     - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8320,8 +8366,20 @@ PrefabInstance:
       value: Lemon Tree 3 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.83925
+      value: -114.7
       objectReference: {fileID: 0}
     - target: {fileID: 4763728976229326, guid: 9b77d12e48b7f364a82333485eca4473, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8563,6 +8621,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d513e3e97508a3429bc5eac2b8b7145, type: 3}
+--- !u!1 &1913812660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2070724139382432930, guid: bf0ea4a7b2c279047a7d801bff445913, type: 3}
+  m_PrefabInstance: {fileID: 1514801361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1930770342
 PrefabInstance:
   m_ObjectHideFlags: 0
